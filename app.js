@@ -1,18 +1,28 @@
-/* Crear estructura del proyecto (HTML, CSS y JS)
-Subirlo a un repositorio en Github e ir realizando commits atómicos
-En el HTML agregar:
- Un título
- Instrucciones que le indiquen al usuario que debe ingresar la cantidad a convertir (moneda agentina) y seleccionar el cambio de moneda
- Input donde pueda ingresar el monto
- Select para las opciones de tipo de cambio (peso mexicano, dólar, peso colombiano...)
- Espacio donde se mostrará el resultado al usuario (div, párrafo...)
-En el JS desarrollar:
- Obtener el valor del Input
- Obtener el valor del Select
- Con un Switch ejecutar el tipo de cambio según la selección del usuario (valor del select)
- Realizar la operación necesaria para el tipo de cambio (* Guía al final de este README)
- Entregar al usuario el resultado en pantalla
-CSS
- Estilos muuuuy básicos, favor de no enfocarse en esta parte
- */
+//OBTENIENDO EN VALOR DEL INPUT
+const ingresoDeMoneda = document.getElementById ('ingreso-de-moneda');
+
+//OBTENIENDO VALOR DEL SELECT
+const valorDelSelect = document.getElementById ('valor-del-select');
+
+//OBTENIENDO EL VALOR TOTAL
+const inputValorTotal = document.getElementById ('input-valor-total');
+
+
+//UTILIZANDO SWITCH
+valorDelSelect.addEventListener ('change', () => {
+    switch (valorDelSelect.value){
+    case "euro":
+        inputValorTotal.value = 0.0087 * ingresoDeMoneda.value
+        break; 
+    case "mxn":
+        inputValorTotal.value = 4.73 * ingresoDeMoneda.value
+        break;
+    case "usd":
+        inputValorTotal.value = 0.011 * ingresoDeMoneda.value
+        break;
+    case "col":
+        inputValorTotal.value = 39.78 * ingresoDeMoneda.value
+        break;
+    }
+})
 

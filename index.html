@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app.css">
     <title>Ejercicio</title>
 </head>
 <body>
     
-    <div>
-        <h2>Conversos de monedas</h2>
+    <div class="div-input">
+        <h2 class="tittle-monedas">Conversos de monedas</h2>
 
-    <ol>
+    <ol class="box-intrucciones">
         <li>Ingrese la cantidad a convertir</li>
         <li>Seleccionar por que moneda convertira ese monto</li>
     </ol>
     </div>
 
-    <div>
-    <h3>Monto para convertir</h3>
-    <input type="text" name="" id=""> 
-    <select name="monedas" id="">
-        <option value="peso mexicano">Peso mexicano</option>
-        <option value="dolar">Dolar</option>
-        <option value="peso colombiano">Peso colombiano</option>
-        <option value="euro">Euro</option>    
+    <div class="div-select">
+    <h3 class="tittle-monto">Monto para convertir</h3>
+    <input type="text" name="" id="ingreso-de-moneda" class="ingreso-de-moneda"> 
+    <select name="monedas" id="valor-del-select" class="valor-del-select">
+        <option value="mxn" id="mxn">Peso mexicano</option>
+        <option value="usd" id="usd">Dolar</option>
+        <option value="col" id="col">Peso colombiano</option>
+        <option value="euro" id="euro">Euro</option>    
     </select>
+
+    <label for="" class="label-moneda-convertida">Moneda convertida</label>
+    <input type="text" id="input-valor-total">
     </div>
 
     <script src="./app.js"></script>
